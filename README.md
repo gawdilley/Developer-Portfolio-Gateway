@@ -15,9 +15,9 @@ This repository serves as a central directory for navigating my coursework and p
 
 ## 👤 Profile
 
-<img src="assets/headshot_1000.jpg" alt="Gabriel Dilley" width="200" style="border-radius: 8px;"/>
-
 ### Gabriel Dilley
+
+<img src="assets/headshot_1000.jpg" alt="Gabriel Dilley" width="200" style="border-radius: 8px;"/>
 
 [GitHub](https://github.com/gawdilley) • [Email](mailto:gadill01@wsc.edu)
 
