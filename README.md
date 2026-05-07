@@ -15,9 +15,9 @@ This repository serves as a central directory for navigating my coursework and p
 
 ## 👤 Profile
 
-### Gabriel Dilley
+<img src="assets/profile.jpg" alt="Gabriel Dilley" width="200" style="border-radius: 8px;"/>
 
-<img src="assets/headshot_1000.jpg" alt="Gabriel Dilley" width="200" style="border-radius: 8px;"/>
+### Gabriel Dilley
 
 [GitHub](https://github.com/gawdilley) • [Email](mailto:gadill01@wsc.edu)
 
@@ -177,6 +177,27 @@ A `COBOL` reporting program that processes customer financial records and genera
 ### 🚦 Status
 ✅ Completed
 
+### 📄 Example Output
+
+```
+DATE:  03/17/2026               YEAR-TO-DATE SALES REPORT                PAGE:   1
+TIME:  09:45                                                              RPT3001
+
+BRANCH   CUST   CUSTOMER NAME            SALES THIS YTD   SALES LAST YTD    CHANGE AMT   CHANGE %
+------   -----  --------------------     --------------   --------------   ----------   --------
+
+ 01      00101  ACME CORPORATION              15,000.00        12,500.00       2,500.00       20.0
+ 01      00102  SMITH HARDWARE                 8,200.00         9,100.00         900.00-        9.9-
+ 01      00103  METRO SUPPLY CO                4,750.00         3,200.00       1,550.00       48.4
+                     BRANCH TOTAL             27,950.00        24,800.00       3,150.00       12.7
+
+ 02      00201  LAKE CITY TOOLS               22,000.00        19,800.00       2,200.00       11.1
+ 02      00202  RIVERSIDE MFG                  9,100.00         9,100.00            .00         .0
+                     BRANCH TOTAL             31,100.00        28,900.00       2,200.00        7.6
+
+                     GRAND TOTAL              59,050.00        53,700.00       5,350.00        9.9
+```
+
 [RPT3000 Repo](https://github.com/gawdilley/COBOL-Chapter-4-Assignment)
 
 🔙 [Back to TOC](#-table-of-contents)
@@ -196,6 +217,34 @@ An advanced `COBOL` reporting system that generates a `three-level YTD Sales Rep
 
 ### 🚦 Status
 ✅ Completed
+
+### 📄 Example Output
+
+```
+DATE:  03/26/2026                    YEAR-TO-DATE SALES REPORT            PAGE:    1
+TIME:  10:30                                                               RPT5001
+
+BRANCH  SALESREP  CUSTOMER NAME         SALES THIS YTD   SALES LAST YTD    CHANGE AMT   CHANGE %
+------  --------  --------------------  --------------   --------------   ----------   --------
+
+ 01       01      ACME CORPORATION           15,000.00        12,500.00       2,500.00       20.0
+                  SMITH HARDWARE              8,200.00         9,100.00         900.00-        9.9-
+                       SALESREP TOTAL        23,200.00        21,600.00       1,600.00        7.4 *
+
+         02       JONES ELECTRIC             11,500.00        11,500.00            .00         .0
+                  METRO SUPPLY CO             4,750.00         3,200.00       1,550.00       48.4
+                       SALESREP TOTAL        16,250.00        14,700.00       1,550.00       10.5 *
+
+                       BRANCH TOTAL          39,450.00        36,300.00       3,150.00        8.7 **
+
+ 02       01      LAKE CITY TOOLS            22,000.00        19,800.00       2,200.00       11.1
+                  RIVERSIDE MFG               9,100.00         9,100.00            .00         .0
+                       SALESREP TOTAL        31,100.00        28,900.00       2,200.00        7.6 *
+
+                       BRANCH TOTAL          31,100.00        28,900.00       2,200.00        7.6 **
+
+                       GRAND TOTAL           70,550.00        65,200.00       5,350.00        8.2 ***
+```
 
 [RPT5000 Repo](https://github.com/gawdilley/COBOL-Chapter-5-Assignment)
 
@@ -217,6 +266,29 @@ An advanced `COBOL` program that introduces `in-memory table processing` with a 
 ### 🚦 Status
 ✅ Completed
 
+### 📄 Example Output
+
+```
+DATE:  04/02/2026                    YEAR-TO-DATE SALES REPORT            PAGE:    1
+TIME:  10:30                                                               RPT6001
+
+BRANCH  SALESREP          CUSTOMER NAME         SALES THIS YTD   SALES LAST YTD   CHANGE AMT   CHANGE %
+------  ----------------  --------------------  --------------   --------------   ----------   --------
+
+ 01      01 JOHNSON       ACME CORPORATION          15,000.00        12,500.00      2,500.00      +20.0
+                          SMITH HARDWARE             8,200.00         9,100.00        900.00-       -9.9
+                          METRO SUPPLY CO            4,750.00         3,200.00      1,550.00      +48.4
+                               SALESREP TOTAL       $27,950.00       $24,800.00     $3,150.00      +12.7 *
+
+         02 MARTINEZ      LAKE CITY TOOLS           22,000.00        19,800.00      2,200.00      +11.1
+                          RIVERSIDE MFG              9,100.00         9,100.00           .00        +0.0
+                               SALESREP TOTAL       $31,100.00       $28,900.00     $2,200.00       +7.6 *
+
+                               BRANCH TOTAL         $59,050.00       $53,700.00     $5,350.00       +9.9 **
+
+                               GRAND TOTAL          $59,050.00       $53,700.00     $5,350.00       +9.9 ***
+```
+
 [RPT6000 Repo](https://github.com/gawdilley/COBOL-Chapter-6-Assignment)
 
 🔙 [Back to TOC](#-table-of-contents)
@@ -237,6 +309,30 @@ A `COBOL` file maintenance project containing three programs that demonstrate `s
 
 ### 🚦 Status
 ✅ Completed
+
+### 📄 Example Output
+
+```
+EMPTRAN (Transaction File)          OLDEMP (Old Master File)
+----------------------------------  ----------------------------------
+A 10045 JAMES BROWN   SALES01...    10032 EMILY CLARK   HR001...
+C 10032               ACCT01...     10067 MARCUS LEE    IT002...
+D 10067                             10089 SARA JONES    SALES01...
+
+Processing result:
+
+  Tran 10032 = Master 10032  →  EQUAL   →  Change applied     →  written to NEWEMP
+  Tran 10045 > Master 10032  →  LO      →  Master written unchanged
+  Tran 10045 < Master 10067  →  HI      →  Add applied        →  new record written to NEWEMP
+  Tran 10067 = Master 10067  →  EQUAL   →  Delete applied     →  record skipped
+  EOF        < Master 10089  →  LO      →  Master written unchanged
+
+NEWEMP (Updated Master File)        ERRTRAN (Error File)
+----------------------------------  ----------------------------------
+10032 EMILY CLARK   ACCT01...       (empty — all transactions valid)
+10045 JAMES BROWN   SALES01...
+10089 SARA JONES    SALES01...
+```
 
 [SEQ3000 Repo](https://github.com/gawdilley/COBOL-SEQ3000)
 
